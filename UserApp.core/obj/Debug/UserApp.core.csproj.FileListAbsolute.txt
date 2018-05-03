@@ -1,0 +1,6 @@
+c:\users\user\source\repos\UserRepositoryPattern\UserApp.core\bin\Debug\UserApp.core.dll
+c:\users\user\source\repos\UserRepositoryPattern\UserApp.core\bin\Debug\UserApp.core.pdb
+c:\users\user\source\repos\UserRepositoryPattern\UserApp.core\obj\Debug\UserApp.core.csproj.CoreCompileInputs.cache
+c:\users\user\source\repos\UserRepositoryPattern\UserApp.core\obj\Debug\UserApp.core.dll
+c:\users\user\source\repos\UserRepositoryPattern\UserApp.core\obj\Debug\UserApp.core.pdb
+c:\users\user\source\repos\UserRepositoryPattern\UserApp.core\obj\Debug\UserApp.core.csprojResolveAssemblyReference.cache

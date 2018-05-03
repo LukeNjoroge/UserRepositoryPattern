@@ -1,0 +1,14 @@
+c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\obj\Debug\UserApp.infrastructure.csprojResolveAssemblyReference.cache
+c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\obj\Debug\UserApp.infrastructure.csproj.CoreCompileInputs.cache
+c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debug\UserApp.infrastructure.dll.config
+c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debug\UserApp.infrastructure.dll
+c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debug\UserApp.infrastructure.pdb
+c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debug\EntityFramework.dll
+c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debug\UserApp.core.dll
+c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debug\UserApp.core.pdb
+c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debug\EntityFramework.xml
+c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\obj\Debug\UserApp.infrastructure.csproj.CopyComplete
+c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\obj\Debug\UserApp.infrastructure.dll
+c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\obj\Debug\UserApp.infrastructure.pdb
