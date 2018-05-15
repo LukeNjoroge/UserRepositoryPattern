@@ -4,32 +4,34 @@
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div class="row">
+    <div class="col-md-6">
+        <div class="box box-primary">
+            <div>
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.RoleName)
+                    </dt>
 
-<h2>Details</h2>
+                    <dd>
+                        @Html.DisplayFor(model => model.RoleName)
+                    </dd>
 
-<div>
-    <h4>Role</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.RoleName)
-        </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.RoleStatus)
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.RoleName)
-        </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.RoleStatus)
+                    </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.RoleStatus)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.RoleStatus)
-        </dd>
-
-    </dl>
+                </dl>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <a href="~/Roles" class="btn btn-danger">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.RoleID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

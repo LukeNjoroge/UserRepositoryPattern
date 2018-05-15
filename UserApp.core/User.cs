@@ -13,6 +13,8 @@ namespace UserApp.Core
         [Required]
         [MaxLength(100)]
         public string FullName { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
         [Required]
         public string PhoneNo { get; set; }
         [Required]

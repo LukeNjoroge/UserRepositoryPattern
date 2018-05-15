@@ -1,4 +1,3 @@
-c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\obj\Debug\UserApp.infrastructure.csprojResolveAssemblyReference.cache
 c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\obj\Debug\UserApp.infrastructure.csproj.CoreCompileInputs.cache
 c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debug\UserApp.infrastructure.dll.config
 c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debug\UserApp.infrastructure.dll
@@ -12,3 +11,18 @@ c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debu
 c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\obj\Debug\UserApp.infrastructure.csproj.CopyComplete
 c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\obj\Debug\UserApp.infrastructure.dll
 c:\users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\obj\Debug\UserApp.infrastructure.pdb
+C:\Users\user\source\repos\UserRepositoryPattern\UserApp.infrastructure\obj\Debug\UserApp.Infrastructure.csprojAssemblyReference.cache
+C:\Users\LUKE\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debug\UserApp.infrastructure.dll.config
+C:\Users\LUKE\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debug\UserApp.infrastructure.dll
+C:\Users\LUKE\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debug\UserApp.infrastructure.pdb
+C:\Users\LUKE\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debug\EntityFramework.dll
+C:\Users\LUKE\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\LUKE\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debug\UserApp.core.dll
+C:\Users\LUKE\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debug\UserApp.core.pdb
+C:\Users\LUKE\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debug\EntityFramework.xml
+C:\Users\LUKE\source\repos\UserRepositoryPattern\UserApp.infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\LUKE\source\repos\UserRepositoryPattern\UserApp.infrastructure\obj\Debug\UserApp.Infrastructure.csprojAssemblyReference.cache
+C:\Users\LUKE\source\repos\UserRepositoryPattern\UserApp.infrastructure\obj\Debug\UserApp.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\LUKE\source\repos\UserRepositoryPattern\UserApp.infrastructure\obj\Debug\UserApp.Infrastructure.csproj.CopyComplete
+C:\Users\LUKE\source\repos\UserRepositoryPattern\UserApp.infrastructure\obj\Debug\UserApp.infrastructure.dll
+C:\Users\LUKE\source\repos\UserRepositoryPattern\UserApp.infrastructure\obj\Debug\UserApp.infrastructure.pdb

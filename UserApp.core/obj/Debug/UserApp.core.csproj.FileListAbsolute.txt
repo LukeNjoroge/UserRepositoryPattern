@@ -3,4 +3,10 @@ c:\users\user\source\repos\UserRepositoryPattern\UserApp.core\bin\Debug\UserApp.
 c:\users\user\source\repos\UserRepositoryPattern\UserApp.core\obj\Debug\UserApp.core.csproj.CoreCompileInputs.cache
 c:\users\user\source\repos\UserRepositoryPattern\UserApp.core\obj\Debug\UserApp.core.dll
 c:\users\user\source\repos\UserRepositoryPattern\UserApp.core\obj\Debug\UserApp.core.pdb
-c:\users\user\source\repos\UserRepositoryPattern\UserApp.core\obj\Debug\UserApp.core.csprojResolveAssemblyReference.cache
+C:\Users\user\source\repos\UserRepositoryPattern\UserApp.core\obj\Debug\UserApp.Core.csprojAssemblyReference.cache
+C:\Users\LUKE\source\repos\UserRepositoryPattern\UserApp.core\bin\Debug\UserApp.core.dll
+C:\Users\LUKE\source\repos\UserRepositoryPattern\UserApp.core\bin\Debug\UserApp.core.pdb
+C:\Users\LUKE\source\repos\UserRepositoryPattern\UserApp.core\obj\Debug\UserApp.Core.csprojAssemblyReference.cache
+C:\Users\LUKE\source\repos\UserRepositoryPattern\UserApp.core\obj\Debug\UserApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\LUKE\source\repos\UserRepositoryPattern\UserApp.core\obj\Debug\UserApp.core.dll
+C:\Users\LUKE\source\repos\UserRepositoryPattern\UserApp.core\obj\Debug\UserApp.core.pdb

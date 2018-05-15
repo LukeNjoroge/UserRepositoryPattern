@@ -17,32 +17,27 @@ namespace UserRepositoryPattern.Content
             return View(db.GetUsers());
         }
 
-       /* // GET: Users/Details/5
-       public ActionResult Details(int? UserID)
+        public ActionResult Details(int? id)
         {
-            if (UserID == null)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //User user = db.FindById(Convert.ToInt32(id));
-            var user = db.FindById(predicate: Expression<Func<User, bool>> UserID);
+            
+            var user = db.FindById(model => model.UserID == id);
 
             if (user == null)
             {
                 return HttpNotFound();
             }
             return View(user);
-        }*/
+        }
 
-        // GET: Users/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Users/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "UserID,FullName,PhoneNo,Email,Dob,RoleID,GenderID,UserStatus")] User user)
@@ -57,13 +52,14 @@ namespace UserRepositoryPattern.Content
         }
 
         // GET: Users/Edit/5
-        /* public ActionResult Edit(int? id)
+         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var user = db.FindById(Convert.ToBoolean(id));
+            var user = db.FindById(model => model.UserID == id);
+            
             if (user == null)
             {
                 return HttpNotFound();
@@ -93,7 +89,7 @@ namespace UserRepositoryPattern.Content
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            User user = db.FindById(Convert.ToBoolean(id));
+            var user = db.FindById(model => model.RoleID == id);
             if (user == null)
             {
                 return HttpNotFound();
@@ -106,8 +102,8 @@ namespace UserRepositoryPattern.Content
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            User user = db.FindById(Convert.ToBoolean(id));
-            db.Remove(Convert.ToBoolean(id));
+            var user = db.FindById(model => model.UserID == id);
+            
             return RedirectToAction("Index");
         }
 
@@ -118,6 +114,6 @@ namespace UserRepositoryPattern.Content
                 //db.Dispose();
             }
             base.Dispose(disposing);
-        }*/
+        }
     }
 }
