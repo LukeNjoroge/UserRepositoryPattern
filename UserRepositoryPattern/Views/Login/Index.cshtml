@@ -1,7 +1,7 @@
 ﻿@model UserRepositoryPattern.Models.LoginViewModel
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
 }
 
 @{
@@ -38,7 +38,7 @@
 
                     <div class="form-group">
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", placeholder = "Password" } })
+                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", placeholder = "Password", type = "Password" } })
                             @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
                         </div>
                     </div>

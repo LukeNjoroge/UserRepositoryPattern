@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="IAuthen.cs" />
     <Compile Include="IRepository.cs" />
-    <Compile Include="IUserLoginRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="Gender.cs" />

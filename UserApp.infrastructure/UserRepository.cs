@@ -11,11 +11,12 @@ namespace UserApp.Infrastructure
     public class UserRepository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         protected readonly UserContext context = new UserContext();
-
+        
         public TEntity Get(int id)
         {
             return context.Set<TEntity>().Find(id);
         }
+
         public void Add(TEntity entity)
         {
             context.Set<TEntity>().Add(entity);
@@ -24,6 +25,7 @@ namespace UserApp.Infrastructure
         public void Edit(TEntity entity)
         {
             context.Entry(entity).State = System.Data.Entity.EntityState.Modified;
+            context.SaveChanges();
         }
 
         public IEnumerable<TEntity> FindById(Expression<Func<TEntity, bool>> predicate)

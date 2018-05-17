@@ -1,50 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
-using System.Web.Security;
+using UserApp.Core;
 using UserApp.Infrastructure;
-using UserRepositoryPattern.Models;
 
 namespace UserRepositoryPattern.Controllers
 {
-    [Authorize]
     public class LoginController : Controller
     {
-        private readonly UserAuthentification _authentification;
-        public LoginController(UserAuthentification authentification)
-        {
-            _authentification = authentification;
-        }
-
-        [HttpGet]
-        [AllowAnonymous]
         public ActionResult Index()
         {
-            return View(new LoginViewModel());
+            return View();
         }
-
         [HttpPost]
-        [AllowAnonymous]
-        public ActionResult Index(LoginViewModel loginViewModel, string returnurl)
+        public ActionResult Index(User user)
         {
-            if(ModelState.IsValid)
+            using (UserContext db = new UserContext())
             {
-                if(_authentification.CheckLogin(loginViewModel.Username, loginViewModel.Password))
+                var usr = db.Users.Single(u => u.Username == user.Username && u.Password == user.Password);
+                if (usr != null)
                 {
-                    FormsAuthentication.SetAuthCookie(loginViewModel.Username, false);
-                    return Redirect(returnurl ?? Url.Action("Index", "Home"));
+                    Session["UserId"] = usr.UserID.ToString();
+                    Session["Username"] = usr.Username.ToString();
+                    return RedirectToAction("LoggedIn");
                 }
-                ModelState.AddModelError("", "Incorect Username or Password");
-                return View();
+                else
+                {
+                    ModelState.AddModelError("", "Username or Password is Wrong");
+                }
             }
             return View();
         }
-
-        public ActionResult Logout()
+        public ActionResult LoggedIn()
         {
-            return RedirectToAction("Index", "Home");
+            if (Session["UserId"] != null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                return RedirectToAction("Login");
+            }
         }
     }
 }

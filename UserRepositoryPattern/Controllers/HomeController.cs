@@ -5,18 +5,15 @@ using System.Web;
 using System.Web.Mvc;
 using UserApp.core;
 using UserApp.Core;
+using UserApp.Infrastructure;
+using UserRepositoryPattern.Models;
 
 namespace UserRepositoryPattern.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
-        private readonly IUserLoginRepository _repository;
+        private UserRepository<User> _repository = new UserRepository<User>();
 
-        public HomeController(IUserLoginRepository repository)
-        {
-            _repository = repository;
-        }
         public ActionResult Index()
         {
             return View(_repository.GetUsers());
