@@ -1,24 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.Entity;
-using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using UserApp.Core;
-using UserApp.Infrastructure;
+using UserRepositoryPattern.DAL;
+using UserRepositoryPattern.ViewModels;
 
 namespace UserRepositoryPattern.Controllers
 {
     public class RolesController : Controller
     {
-        private UserContext db = new UserContext();
+        private Repository<Role> db = new Repository<Role>();
 
         // GET: Roles
         public ActionResult Index()
         {
-            return View(db.Roles.ToList());
+            return View(db.Get());
         }
 
         // GET: Roles/Details/5
@@ -28,64 +25,68 @@ namespace UserRepositoryPattern.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Role role = db.Roles.Find(id);
-            if (role == null)
+
+            var roles = db.FindById(model => model.RoleID == id);
+
+            if (roles == null)
             {
                 return HttpNotFound();
             }
-            return View(role);
+            return View(roles);
         }
 
-        // GET: Roles/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Roles/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "RoleID,RoleName,RoleStatus")] Role role)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.Roles.Add(role);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    db.Add(role);
+                    return RedirectToAction("Index");
+                }
             }
-
-            return View(role);
+            catch (DataException /* dex */)
+            {
+                //Log the error (uncomment dex variable name after DataException and add a line here to write a log.
+                ModelState.AddModelError(string.Empty, "Unable to save changes. Try again, and if the problem persists contact your system administrator.");
+            }
+            return RedirectToAction("Index");
         }
 
-        // GET: Roles/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Role role = db.Roles.Find(id);
-            if (role == null)
-            {
-                return HttpNotFound();
-            }
+            Role role = new Role();
+            
             return View(role);
         }
 
-        // POST: Roles/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "RoleID,RoleName,RoleStatus")] Role role)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.Entry(role).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    db.Edit(role);
+                    return RedirectToAction("Index");
+                }
+            }
+            catch (DataException /* dex */)
+            {
+                //Log the error (uncomment dex variable name after DataException and add a line here to write a log.
+                ModelState.AddModelError(string.Empty, "Unable to save changes. Try again, and if the problem persists contact your system administrator.");
             }
             return View(role);
         }
@@ -97,12 +98,12 @@ namespace UserRepositoryPattern.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Role role = db.Roles.Find(id);
-            if (role == null)
+            var roles = db.FindById(model => model.RoleID == id);
+            if (roles == null)
             {
                 return HttpNotFound();
             }
-            return View(role);
+            return View(roles);
         }
 
         // POST: Roles/Delete/5
@@ -110,19 +111,9 @@ namespace UserRepositoryPattern.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Role role = db.Roles.Find(id);
-            db.Roles.Remove(role);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+            var roles = db.FindById(model => model.RoleID == id);
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
+            return RedirectToAction("Index");
         }
     }
 }
